@@ -56,3 +56,21 @@ document.addEventListener("DOMContentLoaded", function () {
     img.style.transform = `rotate(${randomAngle}deg)`;
   });
 });
+
+// naviagtion bar //
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const progressBar = document.getElementById("progress-bar");
+
+  function updateProgressBar() {
+    let index = sections.length;
+
+    while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+    const sectionId = sections[index].id;
+    progressBar.setAttribute("data-section", sectionId);
+  }
+
+  updateProgressBar();
+  window.addEventListener("scroll", updateProgressBar);
+});

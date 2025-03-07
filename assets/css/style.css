@@ -50,7 +50,7 @@ html {
 
 body {
   position: relative;
-  background-color: var(--color-background);
+  background-color: #634e42;
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
   width: 100%;
@@ -65,7 +65,7 @@ body {
   max-width: 1400px;
   counter-reset: sidenote-counter;
   /* font-family: "helvetica"; */
-  background-color: white;
+  /* background-color: white; */
   cursor: crosshair;
   border: 2px dashed #634e42;
   overflow-x: hidden;
@@ -93,19 +93,21 @@ h1 {
 
 h2 {
   margin-left: 20px;
-  font-family: "City Life";
+  font-family: "LEDLIGHT";
+  /* font-weight: 800; */
+  color: white;
 }
 
 h3 {
   margin-left: 20px;
   /* background-color: #634e42; */
-  border: #634e42 1px dashed;
+  border: white 1px dashed;
   color: rgb(246, 103, 0);
   transition: transform 0.3s ease;
   display: inline-block; /* Ensure the rotation does not affect other elements */
   margin-top: 20px; /* Add some margin to avoid overlapping */
   margin-bottom: 10px; /* Add some margin to avoid overlapping */
-  font-family: "City Life";
+  font-family: "LEDLIGHT";
 }
 
 h4 {
@@ -115,8 +117,8 @@ h4 {
 h5 {
   font-family: "FA_QBUDEAZQXF";
   font-size: 40pt;
-  text-decoration: underline 1px dashed #634e42;
-  text-decoration: overline 1px dashed #634e42;
+  text-decoration: underline 1px dashed white;
+  text-decoration: overline 1px dashed white;
 }
 h5:hover {
   font-family: "Pt serif";
@@ -131,7 +133,8 @@ p {
   font-size: 16pt;
   /* border: 1px dashed #634e42; */
   padding: 3px;
-  text-decoration: underline 1px dashed #634e42;
+  text-decoration: underline 1px dashed white;
+  color: white;
 }
 .chapter-title {
   margin-bottom: 10px;
@@ -157,6 +160,8 @@ ul {
 /* ordered list and unordered list styles */
 
 hr {
+  border: dashed 1px white;
+  width: 100%;
   /* horizontal rule style */
 }
 
@@ -170,7 +175,7 @@ hr {
   /* margin-left: 20px; */
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #634e42;
+  color: white;
   text-align: center;
   margin: 0 auto;
   display: block;
@@ -190,15 +195,16 @@ nav {
   list-style: none;
   cursor: crosshair;
   margin: 0;
-  text-decoration: underline dashed 2px #634e42;
+  text-decoration: underline dashed 2px white;
 }
 .nav-item a {
   display: inline-block;
   transition: transform 0.3s ease;
+  color: white;
 }
 
 .nav-item a:hover {
-  text-decoration: underline dashed 2px #634e42;
+  text-decoration: underline dashed 2px #ffffff;
   /* This will be overridden by JavaScript */
 }
 
@@ -445,8 +451,6 @@ img {
   outline-offset: -6px;
 }
 img:hover {
-  filter: brightness(100%);
-  background-color: rgb(246, 103, 0);
   outline: 1px dashed white; /* Dashed outline */
 }
 
@@ -677,15 +681,15 @@ label.margin-toggle:not(.sidenote-number) {
 .dashed-line {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 10%;
   width: 100%;
   height: 2px;
   background: repeating-linear-gradient(
     to right,
     transparent,
     transparent 5px,
-    #634e42 1px,
-    #634e42 10px
+    white 1px,
+    white 10px
   );
   transform-origin: 0% 50%;
 }
@@ -732,4 +736,128 @@ label.margin-toggle:not(.sidenote-number) {
   height: auto;
   margin: 0 auto;
   display: block;
+}
+.vertical-line {
+  position: fixed;
+  top: 0;
+  left: 265px;
+  width: 1px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 5px,
+    white 1px,
+    white 10px
+  );
+  z-index: 1000; /* Ensure it is on top of other content */
+}
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .vertical-line {
+    left: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .vertical-line {
+    left: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vertical-line {
+    left: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vertical-line {
+    left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vertical-line {
+    left: 20px;
+  }
+}
+
+.fixed-size {
+  width: 400px; /* Set your desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.no-style {
+  filter: none;
+  color: inherit;
+  transition: none;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 40px;
+  width: 10px;
+  height: 100%;
+  background-color: #45362d; /* Default color */
+  transition: background-color 0.1s;
+}
+
+#progress-bar[data-section="abstract"] {
+  background-color: #634e42; /* SaddleBrown */
+}
+
+#progress-bar[data-section="introduction"] {
+  background-color: #45362d; /* Sienna */
+}
+
+#progress-bar[data-section="chapter-2"] {
+  background-color: #2d1301; /* Chocolate */
+}
+
+#progress-bar[data-section="chapter-3"] {
+  background-color: #f1d6bb; /* Peru */
+}
+
+#progress-bar[data-section="chapter-4"] {
+  background-color: white;
+}
+
+#progress-bar[data-section="conclusion"] {
+  background-color: black;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  #progress-bar {
+    left: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  #progress-bar {
+    left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #progress-bar {
+    left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #progress-bar {
+    left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  #progress-bar {
+    left: 2px;
+  }
 }
