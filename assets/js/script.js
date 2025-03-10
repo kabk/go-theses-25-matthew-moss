@@ -14,6 +14,26 @@ function docReady(fn) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".animation-image");
+  let currentIndex = 0;
+
+  function showNextImage() {
+    images[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add("active");
+  }
+
+  images[currentIndex].classList.add("active");
+  const interval = setInterval(showNextImage, 500); // Change image every 0.5 seconds
+
+  setTimeout(() => {
+    clearInterval(interval);
+    document.getElementById("image-animation").style.display = "none"; // Hide the animation container
+  }, 5000); // Animation lasts for 5 seconds
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Rotate nav items on hover
   const navItems = document.querySelectorAll(".nav-item a");
 
   navItems.forEach((item) => {
@@ -26,39 +46,24 @@ document.addEventListener("DOMContentLoaded", function () {
       item.style.transform = "rotate(0deg)";
     });
   });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const overlay = document.getElementById("overlay");
-
-  // Hide the overlay after 3 seconds
-  setTimeout(() => {
-    overlay.style.display = "none";
-  }, 3000); // 3000 milliseconds = 3 seconds
-});
-
-// Rotate h3 tags at random angles on page load
-document.addEventListener("DOMContentLoaded", function () {
+  // Rotate h3 tags at random angles on page load
   const h3Tags = document.querySelectorAll("h3");
 
   h3Tags.forEach((h3) => {
     const randomAngle = Math.floor(Math.random() * 21) - 10; // Random angle between -10 and 10 degrees
     h3.style.transform = `rotate(${randomAngle}deg)`;
   });
-});
 
-// Rotate images at random angles on page load
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll("img");
+  // Rotate images at random angles on page load
+  const allImages = document.querySelectorAll("img");
 
-  images.forEach((img) => {
+  allImages.forEach((img) => {
     const randomAngle = Math.floor(Math.random() * 11) - 5; // Random angle between -5 and 5 degrees
     img.style.transform = `rotate(${randomAngle}deg)`;
   });
-});
 
-// naviagtion bar //
-document.addEventListener("DOMContentLoaded", function () {
+  // Navigation bar progress
   const sections = document.querySelectorAll("section");
   const progressBar = document.getElementById("progress-bar");
 
