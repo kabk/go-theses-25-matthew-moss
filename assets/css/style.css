@@ -80,14 +80,9 @@ a:hover {
   text-decoration: none;
 }
 
-h1 {
-  /* h1 style */
-}
-
 h2 {
   margin-left: 20px;
   font-family: "LEDLIGHT";
-  /* font-weight: 800; */
   color: white;
 }
 
@@ -97,9 +92,9 @@ h3 {
   border: white 1px dashed;
   color: rgb(246, 103, 0);
   transition: transform 0.3s ease;
-  display: inline-block; /* Ensure the rotation does not affect other elements */
-  margin-top: 20px; /* Add some margin to avoid overlapping */
-  margin-bottom: 10px; /* Add some margin to avoid overlapping */
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-family: "LEDLIGHT";
   font-size: 30pt;
   padding: 5px;
@@ -114,24 +109,15 @@ h4 {
   border: dashed 1px white;
 }
 
-h5 {
-  /* h4-h5-h6 style */
-}
-h6 {
-  /* h4-h5-h6 style */
-}
-
 p {
-  font-family: "pt serif";
+  font-family: "PT Serif";
   margin-left: 20px;
   margin-right: 20px;
   font-size: 16pt;
-  /* border: 1px dashed #634e42; */
   padding: 3px;
   text-decoration: underline 1px dashed white;
   color: white;
   border-right: dashed 1px white;
-  /* border-left: white dashed 1px; */
 }
 .chapter-title {
   margin-bottom: 10px;
@@ -184,15 +170,12 @@ hr {
 .title1 {
   font-size: 36pt;
   font-weight: 800;
-  /* margin-left: 20px; */
   margin-top: 20px;
   margin-bottom: 20px;
   color: white;
   text-align: center;
   margin: 0 auto;
   display: block;
-
-  /* width: fit-content; */
 }
 
 /* navigation */
@@ -221,7 +204,6 @@ nav {
 
 .nav-item a:hover {
   text-decoration: underline dashed 2px #ffffff;
-  /* This will be overridden by JavaScript */
 }
 
 nav ul,
@@ -691,37 +673,6 @@ label.margin-toggle:not(.sidenote-number) {
   color: white;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 1200px) {
-  .vertical-line {
-    left: 200px;
-  }
-}
-
-@media (max-width: 992px) {
-  .vertical-line {
-    left: 150px;
-  }
-}
-
-@media (max-width: 768px) {
-  .vertical-line {
-    left: 100px;
-  }
-}
-
-@media (max-width: 576px) {
-  .vertical-line {
-    left: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .vertical-line {
-    left: 20px;
-  }
-}
-
 .fixed-size {
   width: 400px; /* Set your desired width */
   height: auto; /* Maintain aspect ratio */
@@ -742,24 +693,24 @@ label.margin-toggle:not(.sidenote-number) {
   left: 40px;
   width: 10px;
   height: 100%;
-  background-color: #45362d; /* Default color */
+  background-color: #45362d;
   transition: background-color 0.1s;
 }
 
 #progress-bar[data-section="abstract"] {
-  background-color: #634e42; /* SaddleBrown */
+  background-color: #634e42;
 }
 
 #progress-bar[data-section="introduction"] {
-  background-color: #45362d; /* Sienna */
+  background-color: #45362d;
 }
 
 #progress-bar[data-section="chapter-2"] {
-  background-color: #2d1301; /* Chocolate */
+  background-color: #2d1301;
 }
 
 #progress-bar[data-section="chapter-3"] {
-  background-color: #f1d6bb; /* Peru */
+  background-color: #678299;
 }
 
 #progress-bar[data-section="chapter-4"] {
@@ -768,37 +719,6 @@ label.margin-toggle:not(.sidenote-number) {
 
 #progress-bar[data-section="conclusion"] {
   background-color: black;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 1200px) {
-  #progress-bar {
-    left: 30px;
-  }
-}
-
-@media (max-width: 992px) {
-  #progress-bar {
-    left: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  #progress-bar {
-    left: 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  #progress-bar {
-    left: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  #progress-bar {
-    left: 2px;
-  }
 }
 
 /* Fullscreen slideshow container */
@@ -835,15 +755,37 @@ label.margin-toggle:not(.sidenote-number) {
     margin: 0;
     max-width: 100%;
   }
+  #progress-bar {
+    left: 5px;
+    width: 8px; /* Adjust width to be more proportionate */
+  }
+  .vertical-line {
+    left: 5px; /* Move it closer to the edge */
+    height: 100vh; /* Ensure it spans the full height */
+  }
+  section {
+    padding: 4%; /* Adjust padding for smaller screens */
+  }
 }
 
 @media (max-width: 768px) {
   body {
-    width: 100% !important;
+    width: 80% !important;
     padding-left: 0;
     padding-right: 0;
     margin: 0;
     max-width: 100%;
+  }
+  #progress-bar {
+    left: 3px;
+    width: 6px;
+  }
+  .vertical-line {
+    left: 3px;
+  }
+  section {
+    padding: 3%;
+    min-height: 100vh; /* Ensure full viewport height */
   }
 }
 
@@ -852,5 +794,16 @@ label.margin-toggle:not(.sidenote-number) {
     width: 100% !important;
     padding: 0;
     margin: 0;
+  }
+  #progress-bar {
+    left: 2px;
+    width: 4px;
+  }
+  .vertical-line {
+    left: 1px;
+  }
+  section {
+    padding: 2%;
+    min-height: 100vh;
   }
 }

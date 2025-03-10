@@ -24,12 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   images[currentIndex].classList.add("active");
-  const interval = setInterval(showNextImage, 500); // Change image every 0.5 seconds
-
+  const interval = setInterval(showNextImage, 500);
   setTimeout(() => {
     clearInterval(interval);
     document.getElementById("image-animation").style.display = "none"; // Hide the animation container
-  }, 5000); // Animation lasts for 5 seconds
+  }, 5000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navItems.forEach((item) => {
     item.addEventListener("mouseover", function () {
-      const randomAngle = Math.floor(Math.random() * 21) - 10; // Random angle between -10 and 10 degrees
+      const randomAngle = Math.floor(Math.random() * 21) - 10;
       item.style.transform = `rotate(${randomAngle}deg)`;
     });
 
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const h3Tags = document.querySelectorAll("h3");
 
   h3Tags.forEach((h3) => {
-    const randomAngle = Math.floor(Math.random() * 21) - 10; // Random angle between -10 and 10 degrees
+    const randomAngle = Math.floor(Math.random() * 21) - 10;
     h3.style.transform = `rotate(${randomAngle}deg)`;
   });
 
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const allImages = document.querySelectorAll("img");
 
   allImages.forEach((img) => {
-    const randomAngle = Math.floor(Math.random() * 11) - 5; // Random angle between -5 and 5 degrees
+    const randomAngle = Math.floor(Math.random() * 11) - 5;
     img.style.transform = `rotate(${randomAngle}deg)`;
   });
 
