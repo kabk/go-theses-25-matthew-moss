@@ -217,12 +217,6 @@ nav li {
 
 /* content */
 
-main {
-}
-
-summary {
-}
-
 /* UTILITY CLASSES */
 
 /* hide desktop mobile etc */
@@ -357,33 +351,18 @@ summary {
 /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
 
 @media (max-width: 779px) and (orientation: landscape) {
-  /* your overriding css properties here */
+  body {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
 }
 
 /* use this query to apply style for 'small' desktop screens */
 
 @media (min-width: 780px) and (max-width: 992px) {
   /* your overriding css properties here */
-}
-
-/**************************
- * BASIC CHECKBOX EXAMPLE *
- **************************/
-
-fieldset {
-  padding: 1rem;
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  align-items: center;
-  line-height: 1;
-}
-
-fieldset > input.submit-button {
-  justify-self: end;
-}
-
-#yes:checked + span {
-  background-color: palegreen;
 }
 
 /******************
@@ -581,7 +560,7 @@ label.margin-toggle:not(.sidenote-number) {
   section > dl,
   section > ol,
   section > ul {
-    width: 90%;
+    width: 84%;
   }
 
   figure {
@@ -619,7 +598,7 @@ label.margin-toggle:not(.sidenote-number) {
     float: left;
     left: 1rem;
     clear: both;
-    width: 95%;
+    width: 84%;
     margin: 1rem 2.5%;
     vertical-align: baseline;
     position: relative;
@@ -714,7 +693,7 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 #progress-bar[data-section="chapter-4"] {
-  background-color: white;
+  background-color: rgb(119, 0, 0);
 }
 
 #progress-bar[data-section="conclusion"] {
