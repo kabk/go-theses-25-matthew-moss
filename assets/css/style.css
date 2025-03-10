@@ -9,8 +9,8 @@
 */
 
 @font-face {
-  font-family: "Your Font Name";
-  src: url("../fonts/yourfontname/yourfontname-roman.woff2");
+  font-family: "LEDLIGHT";
+  src: url("../fonts/yourfontname/LEDLIGHT.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -18,9 +18,9 @@
 
 @font-face {
   font-family: "Your Font Name";
-  src: url("../fonts/yourfontname/yourfontname-italic.woff2");
+  src: url("../fonts/yourfontname/PTSerif.ttc") format("truetype");
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
   font-display: block;
 }
 
@@ -33,7 +33,7 @@
   --color-text-link: rgba(0, 0, 255, 0.8);
   --color-text-link-hover: white;
   /* Font values */
-  --font-text: "Your Font Name", "Helvetica", "Arial", sans-serif;
+  /* --font-text: "Your Font Name", "Helvetica", "Arial", sans-serif; */
   --font-size: 24px;
   /* Margin value */
   --margin: 1rem;
@@ -108,10 +108,17 @@ h3 {
   margin-top: 20px; /* Add some margin to avoid overlapping */
   margin-bottom: 10px; /* Add some margin to avoid overlapping */
   font-family: "LEDLIGHT";
+  font-size: 30pt;
+  padding: 5px;
 }
 
 h4 {
-  font-family: "City Life";
+  font-family: "pt serif";
+  font-weight: 0;
+  color: #634e42;
+  background-color: white;
+  width: 652px;
+  border: dashed 1px white;
 }
 
 h5 {
@@ -135,6 +142,7 @@ p {
   padding: 3px;
   text-decoration: underline 1px dashed white;
   color: white;
+  border-right: dashed 1px white;
 }
 .chapter-title {
   margin-bottom: 10px;
@@ -162,7 +170,20 @@ ul {
 hr {
   border: dashed 1px white;
   width: 100%;
+  margin-top: 3px;
+  margin-bottom: 3px;
   /* horizontal rule style */
+}
+
+.vertical-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: 0px;
+  /* width: 1px; */
+  border: white dashed 1px;
+  z-index: 1;
+  /* padding-left: 12.5%; */
 }
 
 /* PAGE STYLES */
@@ -186,9 +207,9 @@ hr {
 /* navigation */
 
 nav {
-  font-family: "Pt serif";
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1rem;
+  padding-bottom: 10px;
   width: 200px;
   font-size: 15pt;
   margin-top: 5px;
@@ -197,10 +218,13 @@ nav {
   margin: 0;
   text-decoration: underline dashed 2px white;
 }
+.nav-item {
+  font-family: "LEDLIGHT";
+}
 .nav-item a {
   display: inline-block;
   transition: transform 0.3s ease;
-  color: white;
+  color: #634e42;
 }
 
 .nav-item a:hover {
@@ -443,7 +467,7 @@ figure.fullwidth figcaption {
 img {
   max-width: 100%;
   filter: brightness(100%);
-  color: #634e42;
+  color: white;
   transition: transform 0.3s ease;
   border: 2px solid transparent; /* Transparent border to create space */
   padding: 15px; /* Gap of 10px around the image */
@@ -456,8 +480,8 @@ img:hover {
 
 .sidenote,
 .marginnote {
-  background-color: #634e42;
-  color: white;
+  background-color: white;
+  color: #634e42;
   float: right;
   clear: right;
   margin-right: -60%;
@@ -473,7 +497,7 @@ img:hover {
 }
 .sidenote-wrapper {
   /* background-color: #634e42; */
-  border: 1px dashed #634e42;
+  border: 1px dashed white;
 }
 
 .sidenote-number {
@@ -662,8 +686,8 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 ::selection {
-  background-color: #634e42; /* Brown highlight color */
-  color: white; /* White text color */
+  background-color: white; /* Brown highlight color */
+  color: #634e42; /* White text color */
 }
 
 ::-moz-selection {
@@ -737,7 +761,7 @@ label.margin-toggle:not(.sidenote-number) {
   margin: 0 auto;
   display: block;
 }
-.vertical-line {
+/* .vertical-line {
   position: fixed;
   top: 0;
   left: 265px;
@@ -751,7 +775,7 @@ label.margin-toggle:not(.sidenote-number) {
     white 10px
   );
   z-index: 1000; /* Ensure it is on top of other content */
-}
+/* } */
 /* Media queries for responsiveness */
 @media (max-width: 1200px) {
   .vertical-line {
