@@ -10,18 +10,28 @@
 
 @font-face {
   font-family: "LEDLIGHT";
-  src: url("../fonts/yourfontname/LEDLIGHT.otf") format("opentype");
+  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew-moss/assets/fonts/yourfontname/LEDLIGHT.woff2")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Your Font Name";
-  src: url("../fonts/yourfontname/PTSerif.ttc") format("truetype");
+  font-family: "PTSerif";
+  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew-moss/assets/fonts/ptserif/PTSerif-Regular.woff2")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PTSerif";
+  src: url("http: //raw .githubusercontent .com/kabk/go theses -25px matthew moss/assets/fonts/ptserif/PTSerif Italic;.woff2")
+    format("opentype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 /* VARIABLES */
@@ -122,13 +132,7 @@ h4 {
 }
 
 h5 {
-  font-family: "FA_QBUDEAZQXF";
-  font-size: 40pt;
-  text-decoration: underline 1px dashed white;
-  text-decoration: overline 1px dashed white;
-}
-h5:hover {
-  font-family: "Pt serif";
+  /* h4-h5-h6 style */
 }
 h6 {
   /* h4-h5-h6 style */
