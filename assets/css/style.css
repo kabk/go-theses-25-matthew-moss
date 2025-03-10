@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "LEDLIGHT";
-  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew-moss/assets/fonts/yourfontname/LEDLIGHT.woff2")
+  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew-moss/assets/fonts/ledlight/LEDLIGHT.woff2")
     format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -25,9 +25,10 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "PTSerif";
-  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew moss/assets/fonts/ptserif/PTSerif Italic.woff2")
+  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew-moss/assets/fonts/ptserif/PTSerif-Italic.woff2")
     format("opentype");
   font-weight: normal;
   font-style: italic;
