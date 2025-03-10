@@ -10,8 +10,7 @@
 
 @font-face {
   font-family: "LEDLIGHT";
-  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew-moss/assets/fonts/ledlight/LEDLIGHT.woff2")
-    format("woff2");
+  src: url("../fonts/ledlight/LEDLIGHT.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -19,8 +18,7 @@
 
 @font-face {
   font-family: "PTSerif";
-  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew-moss/assets/fonts/ptserif/PTSerif-Regular.woff2")
-    format("woff2");
+  src: url("../fonts/ptserif/PTSerif-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -28,8 +26,7 @@
 
 @font-face {
   font-family: "PTSerif";
-  src: url("http://raw.githubusercontent.com/kabk/go-theses-25-matthew-moss/assets/fonts/ptserif/PTSerif-Italic.woff2")
-    format("woff2");
+  src: url("../fonts/ptserif/PTSerif-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -160,6 +157,10 @@ p {
   margin-left: 20px;
   text-decoration: underline 1px dashed #634e42;
 }
+nav ul li a {
+  color: white !important;
+  /* font-family: "pt serif"; */
+}
 
 ol,
 ul {
@@ -225,6 +226,7 @@ nav {
 }
 .nav-item {
   font-family: "LEDLIGHT";
+  color: white;
 }
 .nav-item a {
   display: inline-block;
