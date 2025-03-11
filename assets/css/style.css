@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "LEDLIGHT";
-  src: url("../fonts/ledlight/LEDLIGHT.woff2") format("woff2");
+  src: url("./fonts/ledlight/LEDLIGHT.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "PTSerif";
-  src: url("../fonts/ptserif/PTSerif-Regular.woff2") format("woff2");
+  src: url("./fonts/ptserif/PTSerif-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "PTSerif";
-  src: url("../fonts/ptserif/PTSerif-Italic.woff2") format("woff2");
+  src: url("./fonts/ptserif/PTSerif-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -90,7 +90,7 @@ h3 {
   margin-left: 20px;
   /* background-color: #634e42; */
   border: white 1px dashed;
-  color: rgb(246, 103, 0);
+  color: rgb(255, 102, 0);
   transition: transform 0.3s ease;
   display: inline-block;
   margin-top: 20px;
@@ -740,7 +740,7 @@ label.margin-toggle:not(.sidenote-number) {
   }
   .vertical-line {
     left: 5px; /* Move it closer to the edge */
-    height: 100vh; /* Ensure it spans the full height */
+    height: auto; /* Ensure it spans the full height */
   }
   section {
     padding: 4%; /* Adjust padding for smaller screens */
@@ -764,7 +764,7 @@ label.margin-toggle:not(.sidenote-number) {
   }
   section {
     padding: 3%;
-    min-height: 100vh; /* Ensure full viewport height */
+    min-height: auto; /* Ensure full viewport height */
   }
 
   @media (max-width: 576px) {
