@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "LEDLIGHT";
-  src: url("./fonts/ledlight/LEDLIGHT.woff2") format("woff2");
+  src: url("../fonts/ledlight/LEDLIGHT.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "PTSerif";
-  src: url("/fonts/ptserif/PTSerif-Regular.woff2") format("woff2");
+  src: url("../fonts/ptserif/PTSerif-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "PTSerif";
-  src: url("/fonts/ptserif/PTSerif-Italic.woff2") format("woff2");
+  src: url("../fonts/ptserif/PTSerif-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
