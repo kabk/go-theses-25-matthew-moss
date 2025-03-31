@@ -427,9 +427,9 @@ img {
   /* filter: brightness(100%); */
   /* color: white; */
   /* transition: transform 0.3s ease; */
-  /* border: 2px solid transparent;  */
+  border: 2px solid transparent;
   padding: 15px;
-  /* outline: 1px dashed #634e42;  */
+  outline: 1px dashed white;
   /* outline-offset: -6px; */
 }
 /* img:hover {
@@ -681,23 +681,23 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 #progress-bar[data-section="introduction"] {
-  background-color: #45362d;
+  background-color: #2323ac;
 }
 
 #progress-bar[data-section="chapter-2"] {
-  background-color: #2d1301;
+  background-color: #820f0f;
 }
 
 #progress-bar[data-section="chapter-3"] {
-  background-color: #678299;
+  background-color: #c8b826;
 }
 
 #progress-bar[data-section="chapter-4"] {
-  background-color: rgb(119, 0, 0);
+  background-color: rgb(55, 156, 37);
 }
 
 #progress-bar[data-section="conclusion"] {
-  background-color: black;
+  background-color: rgb(160, 42, 123);
 }
 
 /* Fullscreen slideshow container */
